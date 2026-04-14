@@ -1,26 +1,60 @@
 @import "tailwindcss";
 
+@font-face {
+  font-family: "MD Nichrome";
+  src: url("/fonts/MDNichrome-Regular.woff2") format("woff2"), url("/fonts/MDNichrome-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "MD Nichrome";
+  src: url("/fonts/MDNichrome-RegularOblique.woff2") format("woff2"), url("/fonts/MDNichrome-RegularOblique.woff") format("woff");
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "MD Nichrome";
+  src: url("/fonts/MDNichrome-Bold.woff2") format("woff2"), url("/fonts/MDNichrome-Bold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "MD Nichrome";
+  src: url("/fonts/MDNichrome-BoldOblique.woff2") format("woff2"), url("/fonts/MDNichrome-BoldOblique.woff") format("woff");
+  font-weight: 700;
+  font-style: italic;
+  font-display: swap;
+}
+
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --color-profrakt-purple: #250932;
+  --color-profrakt-purple-light: #3a1650;
+  --color-profrakt-purple-mid: #4a2068;
+  --color-profrakt-violet: #AC92FF;
+  --color-profrakt-lavender: #e8e0f0;
+  --color-profrakt-lavender-light: #f5f0fa;
+  --color-profrakt-cta: #AC92FF;
+  --color-profrakt-cta-hover: #9b7ef5;
+  --color-profrakt-text: #250932;
+  --color-profrakt-text-muted: #5a4d6b;
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
+  --color-background: #ffffff;
+  --color-foreground: var(--color-profrakt-text);
   --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --font-display: "MD Nichrome", Georgia, serif;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--color-background);
+  color: var(--color-foreground);
+  font-family: var(--font-sans), system-ui, sans-serif;
+}
+
+.font-display {
+  font-family: var(--font-display);
 }
