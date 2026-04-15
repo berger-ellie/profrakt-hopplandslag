@@ -87,9 +87,6 @@ export default function Hero() {
                   </svg>
                 )}
               </div>
-              {!isPlaying && (
-                <span className="text-sm font-medium text-white/80">Hovedfilm: En helt spesiell leveranse</span>
-              )}
             </div>
           </div>
         </div>
